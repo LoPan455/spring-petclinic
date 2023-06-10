@@ -24,6 +24,14 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
+              - step:
+                  type: ArtifactoryUpload
+                  name: ArtifactoryUpload_1
+                  identifier: ArtifactoryUpload_1
+                  spec:
+                    connectorRef: tomjfrogjfrogio
+                    target: petclinic-harness-maven-dev-virtual
+                    sourcePath: /
           platform:
             arch: Amd64
             os: Linux
